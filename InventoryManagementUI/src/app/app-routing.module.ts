@@ -4,6 +4,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { UserComponent } from './components/user/user.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
 
 
       {path: 'forbidden', component:ForbiddenComponent},
+      {path:'**', component:PageNotFoundComponent}
 
     ]},
 

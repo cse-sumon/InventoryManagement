@@ -24,6 +24,7 @@ import { UserService } from 'src/app/shared/user.service';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ForbiddenComponent } from './components/forbidden/forbidden.component';
     ProfileComponent,
     MainLayoutComponent,
     HomeComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
