@@ -27,13 +27,12 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
- 
   }
 
   getUsers(){
-    
     this.userService.getUsers().subscribe(
       res=>{
+        console.log(res);
         this.ELEMENT_DATA = <any>res;
         this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
         this.dataSource.paginator = this.paginator;

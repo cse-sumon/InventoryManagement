@@ -27,18 +27,14 @@ export class MainLayoutComponent {
     private http:HttpClient) { }
 
     ngOnInit() {
-      //this.getUserName();
-      console.log('calling..');
-      this.http.get('https://localhost:44325/api/ApplicationUser/GetUserProfile').subscribe(
-        res=>{
-          console.log('called');
-
-          this.user=res;
-        },
-        error=>{
-          console.log(error);
-        }
-      )
+      this.getUserName();
+      // this.http.get('https://localhost:44325/api/ApplicationUser/GetUserProfile').subscribe(
+      //   res=>{ this.user=res;
+      //   },
+      //   error=>{
+      //     console.log(error);
+      //   }
+      // )
     }
 
   onLogout() {
@@ -54,7 +50,6 @@ export class MainLayoutComponent {
   getUserName(){
     this.service.getUserProfile().subscribe(
       res=>{
-        alert('sdfd');
         this.user=res;
       },
       error=>{

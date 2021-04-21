@@ -10,7 +10,7 @@ import { UserService } from 'src/app/shared/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  Roles:string[]=['Admin','Teacher','Advisor','Student'];
+  roles:any='';
   
   constructor(
     public service : UserService, 
@@ -20,6 +20,19 @@ export class RegisterComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    this.getRoles();
+  }
+
+  getRoles(){
+    this.service.getRoles().subscribe(
+      (res:any)=>{
+        this.roles=res;
+        console.log(res);
+      },
+      err=>{
+        console.log(err);
+      }
+    )
   }
 
   onNoClick(): void {

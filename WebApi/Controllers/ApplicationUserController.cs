@@ -145,8 +145,6 @@ namespace WebApi.Controllers
         public ActionResult GetAllUsers()
         {
             var result = (from user in _userManager.Users
-                          join r in _roleManager.Roles on user.Id equals r.Id
-                          
                           select new
                           {
                               Id = user.Id,

@@ -81,6 +81,9 @@ export class UserService {
     return isMatch;
   }
 
+  getRoles(){
+    return this.http.get(this.BaseURI +'/ApplicationUser/GetAllRoles');
+  }
 
   getUserProfile(){
     return this.http.get(this.BaseURI +'/ApplicationUser/GetUserProfile');
