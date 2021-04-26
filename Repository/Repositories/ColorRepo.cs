@@ -23,37 +23,53 @@ namespace Repository.Repositories
 
         public IEnumerable<ColorViewModel> GetAll()
         {
-            var colors = _entities.AsEnumerable();
-            List<ColorViewModel> colorVM = colors.Select(c => new ColorViewModel
+            try
             {
-                Id = c.Id,
-                Code = c.Code,
-                Name = c.Name,
-                Description = c.Description,
-                IsActive = c.IsActive
+                var colors = _entities.AsEnumerable();
+                List<ColorViewModel> colorVM = colors.Select(c => new ColorViewModel
+                {
+                    Id = c.Id,
+                    Code = c.Code,
+                    Name = c.Name,
+                    Description = c.Description,
+                    IsActive = c.IsActive
 
-            }).ToList();
+                }).ToList();
 
-            return colorVM;
+                return colorVM;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
           
         }
 
         public ColorViewModel Get(int id)
         {
-            var color = _entities.AsNoTracking().Where(c => c.Id == id).SingleOrDefault();
-            if (color == null)
+            try
             {
-                return null;
+                var color = _entities.AsNoTracking().Where(c => c.Id == id).SingleOrDefault();
+                if (color == null)
+                {
+                    return null;
+                }
+                ColorViewModel colorVM = new ColorViewModel
+                {
+                    Id = color.Id,
+                    Code = color.Code,
+                    Name = color.Name,
+                    Description = color.Description,
+                    IsActive = color.IsActive,
+                };
+                return colorVM;
             }
-            ColorViewModel colorVM = new ColorViewModel
+            catch (Exception)
             {
-                Id = color.Id,
-                Code = color.Code,
-                Name = color.Name,
-                Description = color.Description,
-                IsActive = color.IsActive,
-            };
-            return colorVM;
+
+                throw;
+            }
         }
 
        

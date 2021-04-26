@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Model;
 using Repository.Interface;
+using Repository.Interfaces;
 using Repository.Repositories;
 using Service.Interfaces;
 using Service.Services;
@@ -95,10 +96,12 @@ namespace WebApi
             //Dependency Register
             // repositories
             services.AddTransient<IColorRepo, ColorRepo>();
+            services.AddTransient<ICategoryRepo, CategoryRepo>();
 
 
             //services
             services.AddScoped<IColorService, ColorService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
 
 

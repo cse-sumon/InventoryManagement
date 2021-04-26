@@ -12,22 +12,21 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ColorController : ControllerBase
+    public class CategoryController : ControllerBase
     {
-        private readonly IColorService _colorServce;
-        public ColorController(IColorService colorService)
+        private readonly ICategoryService _categoryService;
+
+        public CategoryController(ICategoryService categoryService)
         {
-            _colorServce = colorService;
+            _categoryService = categoryService;
         }
-
-
-        // GET: api/<ColorController>
+        // GET: api/<CategoryController>
         [HttpGet]
         public IActionResult GetAll()
         {
             try
             {
-                 return Ok(_colorServce.GetAllColors());
+                return Ok(_categoryService.GetAllCategories());
             }
             catch (Exception)
             {
@@ -36,19 +35,19 @@ namespace WebApi.Controllers
             }
         }
 
-        // GET api/<ColorController>/5
+        // GET api/<CategoryController>/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             try
             {
-                var color = _colorServce.GetColor(id);
-                if (color == null)
+                var category = _categoryService.GetCategory(id);
+                if (category == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(color);
+                return Ok(category);
             }
             catch (Exception)
             {
@@ -57,16 +56,16 @@ namespace WebApi.Controllers
             }
         }
 
-        // POST api/<ColorController>
+        // POST api/<CategoryController>
         [HttpPost]
-        public IActionResult Post(ColorViewModel model)
+        public IActionResult Post(CategoryViewModel model)
         {
             try
             {
                 if (!ModelState.IsValid)
                     return BadRequest();
 
-                _colorServce.InsertColor(model);
+                _categoryService.SaveCategory(model);
                 return Ok();
             }
             catch (Exception)
@@ -76,21 +75,20 @@ namespace WebApi.Controllers
             }
         }
 
-        // PUT api/<ColorController>/5
+        // PUT api/<CategoryController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, ColorViewModel model)
+        public IActionResult Put(CategoryViewModel model, int id)
         {
             try
             {
                 if (!ModelState.IsValid || model.Id != id)
                     return BadRequest();
 
-                var color = _colorServce.GetColor(id);
-
-                if (color == null)
+                var category = _categoryService.GetCategory(id);
+                if (category == null)
                     return NotFound();
 
-                _colorServce.UpdateColor(model);
+                _categoryService.UpdateCategory(model);
                 return Ok();
             }
             catch (Exception)
@@ -100,17 +98,17 @@ namespace WebApi.Controllers
             }
         }
 
-        // DELETE api/<ColorController>/5
+        // DELETE api/<CategoryController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             try
             {
-                var color = _colorServce.GetColor(id);
-                if (color == null)
+                var category = _categoryService.GetCategory(id);
+                if (category == null)
                     return NotFound();
 
-                _colorServce.DeleteColor(id);
+                _categoryService.DeleteCategory(id);
                 return NoContent();
             }
             catch (Exception)
@@ -121,13 +119,12 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpGet]
-        [Route("UpdateStatus/{id}")]
-        public IActionResult UpdateStatus(int id)
+        [HttpGet("ChangeStatus")]
+        public IActionResult ChangeStatus(int id)
         {
             try
             {
-                _colorServce.UpdateStatus(id);
+                _categoryService.ChangeStatus(id);
                 return Ok();
             }
             catch (Exception)
@@ -135,8 +132,6 @@ namespace WebApi.Controllers
 
                 throw;
             }
-
-            
         }
     }
 }
