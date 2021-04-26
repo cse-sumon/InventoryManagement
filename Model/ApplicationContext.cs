@@ -20,5 +20,6 @@ namespace Model
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Color> Colors { get; set; }
     }
 }

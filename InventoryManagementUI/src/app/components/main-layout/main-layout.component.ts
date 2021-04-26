@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent {
-
+  typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -22,9 +22,9 @@ export class MainLayoutComponent {
     user:any='';
 
   constructor(private breakpointObserver: BreakpointObserver,
-    private service: UserService,
-    private router: Router,
-    private http:HttpClient) { }
+              private service: UserService,
+              private router: Router,
+              private http:HttpClient) { }
 
     ngOnInit() {
       this.getUserName();

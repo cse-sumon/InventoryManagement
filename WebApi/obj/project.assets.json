@@ -1874,7 +1874,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Model": "1.0.0"
+          "Model": "1.0.0",
+          "ViewModel": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Repository.dll": {}

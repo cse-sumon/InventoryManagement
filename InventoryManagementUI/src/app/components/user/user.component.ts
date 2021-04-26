@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 })
 export class UserComponent implements OnInit {
 
+  totalUser:number=0;
   ELEMENT_DATA;
   displayedColumns: string[] = ['fullName', 'userName','email', 'phoneNumber', 'action'];
   dataSource = new MatTableDataSource();
@@ -32,7 +33,6 @@ export class UserComponent implements OnInit {
   getUsers(){
     this.userService.getUsers().subscribe(
       res=>{
-        console.log(res);
         this.ELEMENT_DATA = <any>res;
         this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
         this.dataSource.paginator = this.paginator;
@@ -57,6 +57,7 @@ export class UserComponent implements OnInit {
   onCreate(): void {
     // this.userService.formModel.reset();
     const dialogRef = this.dialog.open(RegisterComponent, {
+      panelClass: 'myapp-no-padding-dialog',
       width: '50%',
       data: {formTitle: "Add New User", buttonName: "Submit"}
     });

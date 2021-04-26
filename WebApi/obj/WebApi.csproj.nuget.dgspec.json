@@ -120,6 +120,9 @@
             "projectReferences": {
               "E:\\Asp.Net Core Web Api\\InventoryManagement\\Model\\Model.csproj": {
                 "projectPath": "E:\\Asp.Net Core Web Api\\InventoryManagement\\Model\\Model.csproj"
+              },
+              "E:\\Asp.Net Core Web Api\\InventoryManagement\\ViewModel\\ViewModel.csproj": {
+                "projectPath": "E:\\Asp.Net Core Web Api\\InventoryManagement\\ViewModel\\ViewModel.csproj"
               }
             }
           }

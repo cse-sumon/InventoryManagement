@@ -51,13 +51,21 @@
 
 .mat-list-item {
   border-bottom: 1px solid skyblue;
+  height: 33px  !important;
 }
+
+
+
+.mat-nav-list{
+  padding:0px !important;
+} 
 
 .mat-list-item:hover {
   /* background-color: rgb(115, 164, 255); */
-  background-color: #3f51b5;
+  background-color: #6371f7;
   color: white;
 }
+
 
 .mat-icon {
   color: rgb(124, 175, 241);

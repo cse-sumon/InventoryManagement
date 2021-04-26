@@ -18,3 +18,13 @@ table {
     font-size: 14px;
 }
 
+.myapp-no-padding-dialog .mat-dialog-container {
+    padding: 0;
+  }
+
+
+  @media only screen and (max-width:600){
+      .head{
+        background-color: red;
+      }
+  }

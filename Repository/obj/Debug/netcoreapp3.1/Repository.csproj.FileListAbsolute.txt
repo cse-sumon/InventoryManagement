@@ -10,3 +10,5 @@ E:\Asp.Net Core Web Api\InventoryManagement\Repository\obj\Debug\netcoreapp3.1\R
 E:\Asp.Net Core Web Api\InventoryManagement\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
 E:\Asp.Net Core Web Api\InventoryManagement\Repository\obj\Debug\netcoreapp3.1\Repository.dll
 E:\Asp.Net Core Web Api\InventoryManagement\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
+E:\Asp.Net Core Web Api\InventoryManagement\Repository\bin\Debug\netcoreapp3.1\ViewModel.dll
+E:\Asp.Net Core Web Api\InventoryManagement\Repository\bin\Debug\netcoreapp3.1\ViewModel.pdb

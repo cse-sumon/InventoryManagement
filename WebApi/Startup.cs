@@ -12,6 +12,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Model;
+using Repository.Interface;
+using Repository.Repositories;
+using Service.Interfaces;
+using Service.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,6 +90,16 @@ namespace WebApi
                 };
 
             });
+
+
+            //Dependency Register
+            // repositories
+            services.AddTransient<IColorRepo, ColorRepo>();
+
+
+            //services
+            services.AddScoped<IColorService, ColorService>();
+
 
 
         }

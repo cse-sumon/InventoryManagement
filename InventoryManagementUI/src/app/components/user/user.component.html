@@ -1,14 +1,16 @@
-<h4 class="text-center text-primary">Users List</h4>
-<hr>
-<div class="row">
-  <div class="col-sm-4">
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter User">
-    </mat-form-field>
-  </div>
-  <div class="col-sm-2">
-    <button mat-raised-button  (click)="onCreate()">Create New User</button>
-  </div>
+
+<div class="row head">
+    <div class="col-md-3 font-weight-bold ">
+        <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">USER</h1>
+    </div>
+    <div class="col-sm-4">
+        <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search User">
+        </mat-form-field>
+    </div>
+    <div class="col-sm-2">
+        <button mat-raised-button  (click)="onCreate()"><mat-icon>add_box</mat-icon> Create New User</button>
+    </div>
 </div>
 
 <div class="mat-elevation-z8">

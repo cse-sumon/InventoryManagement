@@ -12,3 +12,5 @@ E:\Asp.Net Core Web Api\InventoryManagement\Service\obj\Debug\netcoreapp3.1\Serv
 E:\Asp.Net Core Web Api\InventoryManagement\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
 E:\Asp.Net Core Web Api\InventoryManagement\Service\obj\Debug\netcoreapp3.1\Service.dll
 E:\Asp.Net Core Web Api\InventoryManagement\Service\obj\Debug\netcoreapp3.1\Service.pdb
+E:\Asp.Net Core Web Api\InventoryManagement\Service\bin\Debug\netcoreapp3.1\ViewModel.dll
+E:\Asp.Net Core Web Api\InventoryManagement\Service\bin\Debug\netcoreapp3.1\ViewModel.pdb
