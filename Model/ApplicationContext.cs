@@ -22,5 +22,6 @@ namespace Model
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
     }
 }

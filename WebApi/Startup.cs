@@ -97,11 +97,13 @@ namespace WebApi
             // repositories
             services.AddTransient<IColorRepo, ColorRepo>();
             services.AddTransient<ICategoryRepo, CategoryRepo>();
+            services.AddTransient<ISubCategoryRepo, SubCategoryRepo>();
 
 
             //services
             services.AddScoped<IColorService, ColorService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ISubCategoryService, SubCategoryService>();
 
 
 
