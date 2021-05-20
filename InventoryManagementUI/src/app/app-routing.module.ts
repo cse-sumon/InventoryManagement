@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
+import { ColorComponent } from './components/color/color.component';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
     children:[
       {path:'', component:HomeComponent},
       {path: 'user', component:UserComponent},
+      {path: 'color', component:ColorComponent},
 
 
 

@@ -29,7 +29,7 @@ namespace WebApi.Controllers
             {
                  return Ok(_colorServce.GetAllColors());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -50,7 +50,7 @@ namespace WebApi.Controllers
 
                 return Ok(color);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -69,7 +69,7 @@ namespace WebApi.Controllers
                 _colorServce.InsertColor(model);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -93,7 +93,7 @@ namespace WebApi.Controllers
                 _colorServce.UpdateColor(model);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -113,7 +113,7 @@ namespace WebApi.Controllers
                 _colorServce.DeleteColor(id);
                 return NoContent();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -130,7 +130,7 @@ namespace WebApi.Controllers
                 _colorServce.UpdateStatus(id);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

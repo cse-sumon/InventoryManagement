@@ -36,7 +36,7 @@ namespace Repository.Repositories
                 return categoryVM;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -60,7 +60,7 @@ namespace Repository.Repositories
 
                 return categoryVM;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -89,7 +89,7 @@ namespace Repository.Repositories
                 _context.SaveChanges();
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -116,7 +116,7 @@ namespace Repository.Repositories
                 _entities.Update(category);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -132,7 +132,7 @@ namespace Repository.Repositories
                 _entities.Remove(category);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

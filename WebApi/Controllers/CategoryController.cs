@@ -28,7 +28,7 @@ namespace WebApi.Controllers
             {
                 return Ok(_categoryService.GetAllCategories());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -49,7 +49,7 @@ namespace WebApi.Controllers
 
                 return Ok(category);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -68,7 +68,7 @@ namespace WebApi.Controllers
                 _categoryService.SaveCategory(model);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -91,7 +91,7 @@ namespace WebApi.Controllers
                 _categoryService.UpdateCategory(model);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -111,7 +111,7 @@ namespace WebApi.Controllers
                 _categoryService.DeleteCategory(id);
                 return NoContent();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -127,7 +127,7 @@ namespace WebApi.Controllers
                 _categoryService.ChangeStatus(id);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

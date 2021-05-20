@@ -38,7 +38,7 @@ namespace Repository.Repositories
 
                 return colorVM;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -65,7 +65,7 @@ namespace Repository.Repositories
                 };
                 return colorVM;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -91,7 +91,7 @@ namespace Repository.Repositories
                 _entities.Add(color);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -116,7 +116,7 @@ namespace Repository.Repositories
                 _entities.Update(color);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -131,7 +131,7 @@ namespace Repository.Repositories
                 _entities.Remove(color);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -151,7 +151,7 @@ namespace Repository.Repositories
                 _entities.Update(color);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

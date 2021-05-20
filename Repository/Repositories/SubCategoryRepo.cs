@@ -39,7 +39,7 @@ namespace Repository.Repositories
 
                 return subCategories;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -53,7 +53,7 @@ namespace Repository.Repositories
             try
             {
                 var subCategories = (from sc in _entities
-                                     where sc.CategoryId == id
+                                     where sc.CategoryId == id && sc.IsActive == true
                                      join c in _context.Categories
                                      on sc.CategoryId equals c.Id
                                      select new SubCategoryViewModel
@@ -73,7 +73,7 @@ namespace Repository.Repositories
 
                 return subCategories;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -104,7 +104,7 @@ namespace Repository.Repositories
 
                 return subCategory;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -134,7 +134,7 @@ namespace Repository.Repositories
                 _entities.Add(subCategory);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -162,7 +162,7 @@ namespace Repository.Repositories
                 _entities.Update(subCategory);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -177,7 +177,7 @@ namespace Repository.Repositories
                 _entities.Remove(subCategory);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -197,7 +197,7 @@ namespace Repository.Repositories
                 _entities.Update(subCategory);
                 _context.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

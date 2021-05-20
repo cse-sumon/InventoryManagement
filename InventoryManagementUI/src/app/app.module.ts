@@ -25,6 +25,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { ForbiddenComponent } from './components/forbidden/forbidden.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ColorComponent } from './components/color/color.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     MainLayoutComponent,
     HomeComponent,
     ForbiddenComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,

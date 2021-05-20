@@ -30,7 +30,7 @@ namespace WebApi.Controllers
             {
                 return Ok(_subCategoryService.GetAllSubCategories());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -49,7 +49,7 @@ namespace WebApi.Controllers
 
                 return Ok(subCategory);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -69,7 +69,7 @@ namespace WebApi.Controllers
 
                 return Ok(subCategory);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -88,7 +88,7 @@ namespace WebApi.Controllers
 
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -111,7 +111,7 @@ namespace WebApi.Controllers
                 _subCategoryService.UpdateSubCategory(model);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
@@ -131,14 +131,14 @@ namespace WebApi.Controllers
                 _subCategoryService.DeleteSubCategory(id);
                 return NoContent();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
             }
         }
 
-
+        // GET api/<SubCategoryController>/ChangeStatus/5
         [HttpGet("ChangeStatus/{id}")]
         public IActionResult ChangeStatus(int id)
         {
@@ -147,7 +147,7 @@ namespace WebApi.Controllers
                 _subCategoryService.ChangeStatus(id);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

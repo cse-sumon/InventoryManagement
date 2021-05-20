@@ -76,3 +76,6 @@ E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\EntityFramew
 E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\EntityFramework.dll
 E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll
 E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+E:\Asp.Net Core Web Api\InventoryManagement\WebApi\bin\Debug\net5.0\System.IO.Pipelines.dll
