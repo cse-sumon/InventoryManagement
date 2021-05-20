@@ -103,7 +103,7 @@ namespace WebApi.Controllers
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromForm]CustomerViewModel model)
+        public IActionResult Put(int id, [FromForm] CustomerViewModel model)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace WebApi.Controllers
                         System.IO.File.Delete(oldImage);
                     }
 
-                    
+
                 }
 
 
@@ -157,7 +157,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                
+
                 var customer = _customerService.GetCustomer(id);
                 if (customer == null)
                     return NotFound();
@@ -167,10 +167,10 @@ namespace WebApi.Controllers
                 if (System.IO.File.Exists(customer.Picture))
                 {
                     System.IO.File.Delete(customer.Picture);
-                   
+
                 }
-                
-                
+
+
                 return NoContent();
             }
             catch (Exception ex)

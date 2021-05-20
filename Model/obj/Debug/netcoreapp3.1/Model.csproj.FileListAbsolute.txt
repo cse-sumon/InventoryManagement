@@ -3,7 +3,6 @@ E:\Asp.Net Core Web Api\InventoryManagement\Model\bin\Debug\netcoreapp3.1\Model.
 E:\Asp.Net Core Web Api\InventoryManagement\Model\bin\Debug\netcoreapp3.1\Model.runtimeconfig.dev.json
 E:\Asp.Net Core Web Api\InventoryManagement\Model\bin\Debug\netcoreapp3.1\Model.dll
 E:\Asp.Net Core Web Api\InventoryManagement\Model\bin\Debug\netcoreapp3.1\Model.pdb
-E:\Asp.Net Core Web Api\InventoryManagement\Model\obj\Debug\netcoreapp3.1\Model.csprojAssemblyReference.cache
 E:\Asp.Net Core Web Api\InventoryManagement\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfoInputs.cache
 E:\Asp.Net Core Web Api\InventoryManagement\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfo.cs
 E:\Asp.Net Core Web Api\InventoryManagement\Model\obj\Debug\netcoreapp3.1\Model.csproj.CoreCompileInputs.cache

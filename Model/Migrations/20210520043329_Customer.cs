@@ -6,13 +6,21 @@ namespace Model.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+         
+
+            //migrationBuilder.AddColumn<char>(
+            //   name: "CustomerType",
+            //   table: "Customers",
+            //   nullable: false,
+            //   defaultValue:'c');
+
             migrationBuilder.CreateTable(
                 name: "Customers",
                 columns: table => new
                 {
-                    CustomerId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Mobile = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Website = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -21,7 +29,7 @@ namespace Model.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Customers", x => x.CustomerId);
+                    table.PrimaryKey("PK_Customers", x => x.Id);
                 });
         }
 
@@ -29,6 +37,7 @@ namespace Model.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Customers");
+
         }
     }
 }

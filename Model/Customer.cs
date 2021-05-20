@@ -18,5 +18,6 @@ namespace Model
         public string Picture { get; set; }
         [Required]
         public string Address { get; set; }
+        public char CustomerType { get; set; }
     }
 }

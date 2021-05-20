@@ -42,7 +42,7 @@ export class ColorComponent implements OnInit {
   onSubmit(data) {
   
     const formData = new FormData();
-    formData.append('id',9);
+    formData.append('id',11);
     formData.append('categoryId',2);
     formData.append('subCategoryId',3);
     formData.append('name', 'jamdani cutton');
@@ -56,7 +56,7 @@ export class ColorComponent implements OnInit {
 
 
 
-    this.http.put('https://localhost:44325/api/Product/9', formData)
+    this.http.put('https://localhost:44325/api/Product/11', formData)
     .subscribe(res => {
   
       alert('Uploaded!!');

@@ -32,7 +32,8 @@ namespace Repository.Repositories
                     Email = c.Email,
                     Website = c.Website,
                     Address = c.Address,
-                    Picture = c.Picture
+                    Picture = c.Picture,
+                    CustomerType = c.CustomerType
 
                 }).ToList();
 
@@ -62,7 +63,8 @@ namespace Repository.Repositories
                     Email = customer.Email,
                     Website = customer.Website,
                     Address = customer.Address,
-                    Picture = customer.Picture
+                    Picture = customer.Picture,
+                    CustomerType = customer.CustomerType
                 };
                 return customerVM;
             }
@@ -73,7 +75,7 @@ namespace Repository.Repositories
             }
         }
 
-        
+
 
         public void Save(CustomerViewModel model)
         {
@@ -90,7 +92,9 @@ namespace Repository.Repositories
                     Email = model.Email,
                     Website = model.Website,
                     Address = model.Address,
-                    Picture = model.Picture
+                    Picture = model.Picture,
+                    CustomerType = model.CustomerType
+                    
                 };
                 _entities.Add(customer);
                 _context.SaveChanges();
@@ -118,7 +122,8 @@ namespace Repository.Repositories
                     Email = model.Email,
                     Website = model.Website,
                     Address = model.Address,
-                    Picture = model.Picture
+                    Picture = model.Picture,
+                    CustomerType = model.CustomerType
                 };
                 _entities.Update(customer);
                 _context.SaveChanges();
