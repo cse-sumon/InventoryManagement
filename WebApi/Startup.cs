@@ -100,6 +100,8 @@ namespace WebApi
             services.AddTransient<ISubCategoryRepo, SubCategoryRepo>();
             services.AddTransient<IProductRepo, ProductRepo>();
             services.AddTransient<ICustomerRepo, CustomerRepo>();
+            services.AddTransient<IRevenueRepo, RevenueRepo>();
+            services.AddTransient<IPaymentRepo, PaymentRepo>();
             
 
 
@@ -109,6 +111,8 @@ namespace WebApi
             services.AddScoped<ISubCategoryService, SubCategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IRevenueService, RevenueService>();
+            services.AddScoped<IPaymentService, PaymentService>();
 
 
 

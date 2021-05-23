@@ -25,5 +25,7 @@ namespace Model
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Revenue> Revenues { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }

@@ -6,3 +6,4 @@ E:\Asp.Net Core Web Api\InventoryManagement\ViewModel\obj\Debug\netcoreapp3.1\Vi
 E:\Asp.Net Core Web Api\InventoryManagement\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.csproj.CoreCompileInputs.cache
 E:\Asp.Net Core Web Api\InventoryManagement\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.dll
 E:\Asp.Net Core Web Api\InventoryManagement\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.pdb
+E:\Asp.Net Core Web Api\InventoryManagement\ViewModel\obj\Debug\netcoreapp3.1\ViewModel.csprojAssemblyReference.cache
